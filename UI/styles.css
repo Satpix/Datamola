@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    font-family: "Roboto Light", sans-serif;
+    font-family: "Roboto Light",'Roboto', sans-serif;
 }
 
 /*16px = 1.15rm
@@ -66,7 +66,7 @@ a:hover {
     background-color: var(--main-pink-color);
     border: 0;
     margin-bottom: 0.4rem;
-    font-family: "Roboto Light", sans-serif;
+    font-family: "Roboto Light",'Roboto', sans-serif;
 }
 
 .header-button:hover {
@@ -241,10 +241,11 @@ a:hover {
     left: 40%;
     z-index: 1;
     border: 0.07rem solid black;
+    font-family: "Roboto Light",'Roboto',sans-serif;
 }
 
 button {
-    font-family: "Roboto Light";
+    font-family: "Roboto Light",'Roboto',sans-serif;
 }
 
 .messages-text-textarea {
@@ -263,7 +264,7 @@ button {
     background-color: var(--main-blue-color);
     width: 10rem;
     height: 4rem;
-    font-family: "Roboto Light", sans-serif;
+    font-family: "Roboto Light",'Roboto', sans-serif;
     border: none;
 }
 
