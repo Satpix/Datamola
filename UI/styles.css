@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -24,7 +25,7 @@ html {
 }
 
 body {
-    font-family: "Roboto Light",'Roboto', sans-serif;
+    font-family: "Roboto Light", sans-serif;
 }
 
 /*16px = 1.15rm
@@ -41,8 +42,10 @@ a:hover {
     color: var(--main-darkblue-color);
 }
 
+.hidden{
+    display: none;
+}
 .header-container {
-    max-width: 103rem;
     display: flex;
     margin: 0 auto;
     background-color: var(--main-blue-color);
@@ -51,7 +54,7 @@ a:hover {
 
 .logo {
     position: relative;
-    background-image: url(/Datamola/UI/assets/img/logo.png);
+    background-image: url(../assets/img/logo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,12 +64,11 @@ a:hover {
 }
 
 .header-button {
+    position: relative;
     width: 12rem;
     height: 3rem;
     background-color: var(--main-pink-color);
     border: 0;
-    margin-bottom: 0.4rem;
-    font-family: "Roboto Light",'Roboto', sans-serif;
 }
 
 .header-button:hover {
@@ -79,10 +81,13 @@ a:hover {
     padding-top: 0.5rem;
     min-width: 12rem;
     margin-right: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .message-container {
-    max-width: 103rem;
     margin: 0 auto;
     background-color: var(--main-blue-color);
     display: flex;
@@ -91,7 +96,6 @@ a:hover {
 .contacts {
     position: relative;
     max-width: 25rem;
-    height: 50rem;
     border: 0.24rem solid var(--main-blue-color);
 }
 
@@ -108,23 +112,22 @@ a:hover {
     display: flex;
     justify-content: center;
     border: 1px solid var(--main-blue-color);
+    align-items: center;
 }
 
 .contacts-filter-input {
     height: 2.5rem;
     width: 19.5rem;
-    margin: 0.75rem 0;
     border: 0.07rem solid var(--main-blue-color);
-    box-sizing: border-box;
 }
 
 .contacts-filter-button {
     position: relative;
     height: 2.5rem;
     width: 2.5rem;
-    margin: 0.75rem -0.07rem;
     background-color: var(--main-white-color);
     border: 0.07rem solid var(--main-blue-color);
+    border-right: none;
     background: url('https://api.iconify.design/ion:search-outline.svg?color=%23249EA4') no-repeat center center / contain;
     color: var(--main-blue-color);
 }
@@ -138,14 +141,19 @@ a:hover {
     max-height: 46rem;
     background-color: var(--main-white-color);
     border: 1px solid var(--main-blue-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .contacts-person {
     width: 22rem;
     height: 4rem;
-    margin: 1rem;
-    margin-left: 1.15rem;
     background-color: var(--main-pink-color);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contacts-person:hover {
@@ -153,14 +161,18 @@ a:hover {
 }
 
 .contacts-person-text {
-    padding: 1rem 0 0 1rem;
+    position: relative;
+    padding-left: 3rem;
     font-size: 1.2rem;
+    line-height: 1rem;
 }
 
 .contacts-person-text::before {
     content: url('https://api.iconify.design/ion:person-circle-outline.svg?width=2rem&height=2rem');
-    padding-right: 0.2rem;
-    vertical-align: -0.7rem;
+    position: absolute;
+    left: 0;
+    top: -0.7rem;
+    padding-left: 0.5rem;
 }
 
 .contacts-dialog-text::before {
@@ -169,7 +181,7 @@ a:hover {
 
 .messages {
     position: relative;
-    width: 78rem;
+    width: 150rem;
     height: 50rem;
     border: 0.24rem solid var(--main-blue-color);
 }
@@ -187,19 +199,18 @@ a:hover {
     display: flex;
     justify-content: space-around;
     border: 1px solid var(--main-blue-color);
+    align-items: center;
 }
 
 .messages-filter {
     position: relative;
     display: flex;
-    justify-content: initial;
 }
 
 .messages-filter-inputs {
     position: relative;
     height: 2.5rem;
     width: 19.5rem;
-    margin: 0.75rem 0;
     border: 0.07rem solid var(--main-blue-color);
     box-sizing: border-box;
 }
@@ -208,13 +219,13 @@ a:hover {
     position: relative;
     height: 2.5rem;
     width: 2.5rem;
-    margin: 0.75rem -0.14rem;
     background-color: var(--main-white-color);
     background: url('https://api.iconify.design/ion:search-outline.svg?color=%23249EA4') no-repeat center center / contain;
     border: 0.07rem solid var(--main-blue-color);
+    border-right: none;
 }
 
-.messages-filter-buttons {
+.messages-filter-buttons:hover {
     cursor: pointer;
 }
 
@@ -229,23 +240,6 @@ a:hover {
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
-}
-
-.messages-button-load {
-    position: absolute;
-    width: 13rem;
-    height: 2.2rem;
-    color: var(--main-white-color);
-    background: var(--main-blue-color);
-    border: none;
-    left: 40%;
-    z-index: 1;
-    border: 0.07rem solid black;
-    font-family: "Roboto Light",'Roboto',sans-serif;
-}
-
-button {
-    font-family: "Roboto Light",'Roboto',sans-serif;
 }
 
 .messages-text-textarea {
@@ -264,7 +258,7 @@ button {
     background-color: var(--main-blue-color);
     width: 10rem;
     height: 4rem;
-    font-family: "Roboto Light",'Roboto', sans-serif;
+    font-family: "Roboto Light", sans-serif;
     border: none;
 }
 
@@ -285,16 +279,24 @@ input[placeholder] {
 }
 
 input[type=datetime-local] {
-    font-family: "Roboto Light";
+}
+
+.messages-button-load {
+    position: absolute;
+    width: 13rem;
+    height: 2.2rem;
+    color: var(--main-white-color);
+    background: var(--main-blue-color);
+    z-index: 1;
+    border: 0.07rem solid black;
+    align-self: center;
 }
 
 .messages-chat-container {
-    position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-width: 75rem;
+    overflow: auto;
     height: 40rem;
-    margin-left: 1.95rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .messages-mymessage {
@@ -305,22 +307,26 @@ input[type=datetime-local] {
     width: 42rem;
     display: flex;
     justify-content: space-between;
-    left: 38.7%;
     text-align: justify;
     transition: 0.5s;
+    align-self: flex-end;
+    margin-right: 2rem;
 }
 
 .messages-chatmessages {
-    display: block;
-    left: 0%;
+    position: relative;
     width: 42rem;
     background: var(--main-blue-gradient);
-}
+    padding: 1rem;
+    margin: 1rem 0rem;
+    text-align: justify;
+    align-self: flex-start;
+    margin-left: 2rem;
 
-.messages-mymessage-container {
-    width: 39rem;
 }
-
+.messages-mymessage-container{
+    width:100%;
+}
 .messages-mymessage-title {
     display: flex;
     justify-content: space-between;
@@ -347,13 +353,13 @@ input[type=datetime-local] {
 
 .messages-mymessage-buttons {
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
 }
 
 .messages-edit {
-    position: relative;
+    border:none;
     width: 1.7rem;
     height: 1.7rem;
     background: url('https://api.iconify.design/ion:pencil-outline.svg?color=%23249EA4&width=1.7rem&height=1.7rem') no-repeat center center;
@@ -364,7 +370,7 @@ input[type=datetime-local] {
 }
 
 .messages-delete {
-    position: relative;
+    border:none;
     width: 1.7rem;
     height: 1.7rem;
     background: url('https://api.iconify.design/ion:trash-outline.svg?color=%23249EA4&width=1.7rem&height=1.7rem') no-repeat center center;
@@ -375,7 +381,6 @@ input[type=datetime-local] {
 }
 
 .footer-container {
-    max-width: 103rem;
     margin: 0 auto;
     background-color: var(--main-blue-color);
     color: var(--main-white-color);
@@ -396,30 +401,12 @@ input[type=datetime-local] {
         width: 17rem;
         transition: 0.5s;
     }
-
-    .messages-mymessage {
-        left: 30%;
-        transition: 0.5s;
-    }
-
-    .messages-chatmessages {
-        left: 0%;
-    }
 }
 
 @media screen and (max-width: 1300px) {
     .messages-filter-inputs {
         width: 14rem;
         transition: 0.5s;
-    }
-
-    .messages-mymessage {
-        left: 24%;
-        transition: 0.5s;
-    }
-
-    .messages-chatmessages {
-        left: 0%;
     }
 }
 
@@ -428,32 +415,12 @@ input[type=datetime-local] {
         width: 12rem;
         transition: 0.5s;
     }
-
-    .messages-mymessage {
-        left: 14%;
-        transition: 0.5s;
-
-    }
-
-    .messages-chatmessages {
-        left: 0%;
-    }
 }
 
 @media screen and (max-width: 1100px) {
-    .messages-mymessage {
-        left: 2%;
-        transition: 0.5s;
-    }
-
-    .messages-chatmessages {
-        left: 0%;
-    }
-
     .messages-text-textarea {
         width: 30rem;
         transition: 0.5s;
-
     }
 }
 
@@ -464,18 +431,11 @@ input[type=datetime-local] {
     }
 
     .messages-mymessage {
-        left: 0%;
-        width: 37rem;
-        transition: 0.5s;
-        margin: 0 auto;
-        margin-top: 1rem;
-        margin-left: -0.5rem;
+        width: 34rem;
     }
 
     .messages-chatmessages {
         width: 34rem;
-        padding-right: 4rem;
-        transition: 0.5s;
     }
 
     .messages-text-textarea {
@@ -493,6 +453,14 @@ input[type=datetime-local] {
     .contacts-person {
         width: 16rem;
         transition: 0.5s;
+    }
+
+    .messages-mymessage {
+        width: 30rem;
+    }
+
+    .messages-chatmessages {
+        width: 30rem;
     }
 
     .contacts-person-text {
@@ -521,12 +489,16 @@ input[type=datetime-local] {
 
 @media screen and (max-width: 800px) {
     .messages-mymessage {
-        width: 30rem;
-        transition: 0.5s;
+        margin-right: 0;
     }
 
     .messages-chatmessages {
-        width: 27rem;
+        margin-left: 0;
+    }
+
+    .messages-chat-container {
+        margin-right: 1.95rem;
+        margin-left: 1.95rem;
     }
 
     .messages-text-textarea {
@@ -541,6 +513,7 @@ input[type=datetime-local] {
         align-items: center;
         justify-content: flex-start;
         height: 8rem;
+        transition: 0.5s;
     }
 
     .messages-filter-buttons {
@@ -555,37 +528,35 @@ input[type=datetime-local] {
 
     .messages-filter {
         height: 2rem;
-        margin-bottom: 0.4rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
     }
 
     .messages-filter-inputs {
-        width: 20rem;
+        width: 27rem;
         transition: 0.5s;
     }
 
     .messages-text {
         height: 42rem;
+        transition: 0.5s;
     }
 
     .messages-chat-container {
         height: 36rem;
-    }
-
-    .messages-button-load {
-        width: 10rem;
-        margin: 0;
-        left: 35%;
+        transition: 0.5s;
     }
 }
 
 @media screen and (max-width: 700px) {
     .messages-mymessage {
-        width: 25rem;
+        width: 22rem;
         transition: 0.5s;
     }
 
     .messages-chatmessages {
         width: 22rem;
+        transition: 0.5s;
     }
 
     .messages-text-textarea {
@@ -594,19 +565,25 @@ input[type=datetime-local] {
     }
 
     .messages-filter-inputs {
-        width: 15rem;
+        width: 20rem;
+        transition: 0.5s;
+    }
+
+    .messages-text-textarea {
+        width: 14rem;
         transition: 0.5s;
     }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 600px) {
     .messages-mymessage {
-        width: 23rem;
+        width: 20rem;
         transition: 0.5s;
     }
 
     .messages-chatmessages {
         width: 20rem;
+        transition: 0.5s;
     }
 
     .messages-text-textarea {
@@ -618,37 +595,22 @@ input[type=datetime-local] {
         width: 13rem;
         transition: 0.5s;
     }
-
-    .messages-button-load {
-        width: 9rem;
-        margin: 0;
-        left: 30%;
-        transition: 0.5s;
-    }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 550px) {
     .header-container {
-        width: 45rem;
+        width:39.3rem;
     }
-
     .footer-container {
-        width: 45rem;
-        font-size: 0.8rem;
+        width:39.3rem;
     }
-
-    .message-container {
-        width: 45rem;
-    }
-
-    .messages-chat-container {
-        width: 27rem;
-    }
-
-    .messages-text {
-        width: 28.6rem;
-    }
-
     .messages {
+        width: 25.4rem;
+    }
+    .messages-text{
+        width: 25.4rem;
+    }
+    .messages-filter{
+        width: 25.4rem;
     }
 }

@@ -6,7 +6,6 @@
     <title>Document</title>
     <script type="text/javascript" defer src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -16,13 +15,10 @@
         </div>
         <div class="buttons">
             <button class="header-button" type="button">Авторизация</button>
-            <br/>
             <button class="header-button" type="button">Регистрация</button>
         </div>
     </div>
 </header>
-
-
 <main>
     <div class="message-container">
         <div class="contacts">
@@ -100,157 +96,45 @@
                 </div>
             </div>
             <div class="messages-text">
-                <div class="messages-chat-container">
-                    <button class="messages-button-load">
+                <div class="messages-chat-container" id="messages-chat-container">
+                    <button class="messages-button-load" id="messages-button-load">
                         Загрузить ещё
                     </button>
                     <!--                    -->
-                    <div class="messages-mymessage messages-chatmessages">
-                        <div class="messages-mymessage-title">
-                            <div class="messages-mymessage-title-login">Пользователь 2</div>
-                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                        </div>
-                        <div class="messages-mymessage-text">
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-                            also reproduced in their exact original form, accompanied by English versions from the 1914
-                            translation by H. Rackham.
-                        </div>
-                    </div>
+<!--                    <div class="messages-chatmessages">-->
+<!--                        <div class="messages-mymessage-title">-->
+<!--                            <div class="messages-mymessage-title-login">Пользователь 2</div>-->
+<!--                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>-->
+<!--                        </div>-->
+<!--                        <div class="messages-mymessage-text">-->
+<!--                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those-->
+<!--                            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are-->
+<!--                            also reproduced in their exact original form, accompanied by English versions from the 1914-->
+<!--                            translation by H. Rackham.-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!--                    -->
-                    <div class="messages-mymessage messages-chatmessages">
-                        <div class="messages-mymessage-title">
-                            <div class="messages-mymessage-title-login">Пользователь 2</div>
-                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                        </div>
-                        <div class="messages-mymessage-text">
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum."
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage">
-                        <div class="messages-mymessage-container">
-                            <div class="messages-mymessage-title">
-                                <div class="messages-mymessage-title-login">Satpix</div>
-                                <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                            </div>
-                            <div class="messages-mymessage-text">
-                                But who has any right to find fault with a man who chooses to enjoy a pleasure that has
-                                no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-                            </div>
-                        </div>
-                        <div class="messages-mymessage-buttons">
-                            <div class="messages-edit"></div>
-                            <div class="messages-delete"></div>
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage">
-                        <div class="messages-mymessage-container">
-                            <div class="messages-mymessage-title">
-                                <div class="messages-mymessage-title-login">Satpix</div>
-                                <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                            </div>
-                            <div class="messages-mymessage-text">
-                                "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
-                                mollitia animi, id est laborum et dolorum fuga.
-                            </div>
-                        </div>
-                        <div class="messages-mymessage-buttons">
-                            <div class="messages-edit"></div>
-                            <div class="messages-delete"></div>
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage messages-chatmessages">
-                        <div class="messages-mymessage-title">
-                            <div class="messages-mymessage-title-login">Пользователь 101</div>
-                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                        </div>
-                        <div class="messages-mymessage-text">
-                            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
-                            nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-                            possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage">
-                        <div class="messages-mymessage-container">
-                            <div class="messages-mymessage-title">
-                                <div class="messages-mymessage-title-login">Satpix</div>
-                                <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                            </div>
-                            <div class="messages-mymessage-text">
-                                Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                                eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-                            </div>
-                        </div>
-                        <div class="messages-mymessage-buttons">
-                            <div class="messages-edit"></div>
-                            <div class="messages-delete"></div>
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage messages-chatmessages">
-                        <div class="messages-mymessage-title">
-                            <div class="messages-mymessage-title-login">Пользователь 100500</div>
-                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                        </div>
-                        <div class="messages-mymessage-text">
-                            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores
-                            alias consequatur aut perferendis doloribus asperiores repellat."
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage">
-                        <div class="messages-mymessage-container">
-                            <div class="messages-mymessage-title">
-                                <div class="messages-mymessage-title-login">Satpix</div>
-                                <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                            </div>
-                            <div class="messages-mymessage-text">
-                                In a free hour, when our power of choice is untrammelled and when nothing prevents our
-                                being able to do what we like best, every pleasure is to be welcomed and every pain
-                                avoided.
-                            </div>
-                        </div>
-                        <div class="messages-mymessage-buttons">
-                            <div class="messages-edit"></div>
-                            <div class="messages-delete"></div>
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage messages-chatmessages">
-                        <div class="messages-mymessage-title">
-                            <div class="messages-mymessage-title-login">Пользователь 100500</div>
-                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                        </div>
-                        <div class="messages-mymessage-text">
-                            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-                            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
-                            est laborum et dolorum fuga.
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div class="messages-mymessage messages-chatmessages">
-                        <div class="messages-mymessage-title">
-                            <div class="messages-mymessage-title-login">Пользователь 100500</div>
-                            <div class="messages-mymessage-title-time">2010-04-02 12:00</div>
-                        </div>
-                        <div class="messages-mymessage-text">
-                            But in certain circumstances and owing to the claims of duty or the obligations of business
-                            it will frequently occur that pleasures have to be repudiated and annoyances accepted.
-                        </div>
-                    </div>
+<!--                    <div class="messages-mymessage">-->
+<!--                        <div class="messages-mymessage-container">-->
+<!--                            <div class="messages-mymessage-title">-->
+<!--                                <div class="messages-mymessage-title-login">Satpix</div>-->
+<!--                                <div class="messages-mymessage-title-time">2010-04-02 12:00</div>-->
+<!--                            </div>-->
+<!--                            <div class="messages-mymessage-text">-->
+<!--                                But who has any right to find fault with a man who chooses to enjoy a pleasure that has-->
+<!--                                no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="messages-mymessage-buttons">-->
+<!--                            <div class="messages-edit"></div>-->
+<!--                            <div class="messages-delete"></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <!--                    -->
                 </div>
                 <div class="messages-text-input-container">
-                    <textarea class="messages-text-textarea" placeholder="Введите сообщение..."></textarea>
-                    <button class="messages-text-button">Отправить</button>
+                    <textarea class="messages-text-textarea" id="messages-text-textarea" placeholder="Введите сообщение..."></textarea>
+                    <button class="messages-text-button" id="messages-text-button">Отправить</button>
                 </div>
             </div>
         </div>
@@ -261,7 +145,7 @@
 <footer>
     <div class="footer-container">
         <div class="footer-text">
-            Navchat. Contact us <a href="#" class="footer-mail">kamash19@gmail.com.</a> Last modified: 11.10.2020.
+            Navchat. Contact us <a href="#" class="footer-mail">kamash19@gmail.com.</a> Last modified: 11.10.2020. Version 2.0.
             Template by Kamash Akhmed.
         </div>
     </div>
